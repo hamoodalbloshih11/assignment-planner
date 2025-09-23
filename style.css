@@ -1,0 +1,581 @@
+@charset "UTF-8";
+:root {
+  --bg: #0b0c0f;
+  --card: #15171c;
+  --panel: #101218;
+  --text: #e8eaf1;
+  --muted: #a6adbb;
+  --border: #232733;
+  --accent: #8b5cf6;
+  /* violet */
+  --accent-2: #22c55e;
+  /* green chips */
+  --danger: #ef4444;
+  --warn: #f59e0b;
+  --ring: #3b82f6;
+  --radius: 14px;
+  --shadow: 0 10px 32px rgba(0, 0, 0, .35);
+  --table-row: #11131a;
+  --table-row-alt: #0e1016;
+  --gap: 12px;
+  --table-cols: 2.3fr 1fr 1.4fr 0.9fr 0.9fr 1fr 1.2fr 0.9fr;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Inter, Roboto, "Helvetica Neue", Arial;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0 0 8px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.app-header,
+.app-footer {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.app-header h1 {
+  font-size: 22px;
+  letter-spacing: 0.2px;
+}
+
+.header-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.divider {
+  width: 1px;
+  height: 28px;
+  background: var(--border);
+}
+
+.btn,
+.select {
+  height: 34px;
+  padding: 0 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #161923;
+  color: var(--text);
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  white-space: nowrap;
+}
+
+.btn:hover {
+  border-color: #2d3342;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #0d0920;
+  border-color: #7c4df0;
+}
+
+.btn-danger {
+  background: #2b1720;
+  border-color: #3e1e2b;
+  color: #ffc1c1;
+}
+
+.layout {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 16px 24px;
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 16px;
+}
+
+.left-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 16px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.form-grid label {
+  display: grid;
+  gap: 6px;
+}
+.form-grid span {
+  color: var(--muted);
+  font-size: 12px;
+}
+.form-grid input,
+.form-grid select,
+.form-grid textarea {
+  width: 100%;
+  background: #0f1118;
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  height: 36px;
+  padding: 0 10px;
+  outline: none;
+}
+.form-grid textarea {
+  height: auto;
+  padding: 10px;
+}
+.form-grid .span-2 {
+  grid-column: span 2;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.help-text {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 12px;
+}
+
+.mini-stats .stats-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+}
+
+.kpi {
+  background: #0e1016;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 3px;
+  text-align: center;
+}
+.kpi span {
+  display: block;
+  font-weight: 700;
+  font-size: 18px;
+}
+.kpi small {
+  display: block;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.filters {
+  margin-bottom: 15px;
+}
+
+.filters .filters-grid {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: 2fr 1fr 1fr 1fr auto 1fr auto;
+}
+.filters .filters-grid input[type=search],
+.filters .filters-grid select {
+  height: 36px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #0f1118;
+  color: var(--text);
+  padding: 0 10px;
+}
+.filters .filters-grid .checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+.filters .filters-grid .checkbox input {
+  accent-color: var(--accent);
+}
+
+.table-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Table shell */
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+/* Header */
+.table thead th {
+  background: #131620;
+  color: #cbd1de;
+  font-weight: 600;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+
+/* Cells */
+.table tbody td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #151924;
+  vertical-align: middle;
+}
+
+/* Zebra rows */
+.table tbody tr:nth-child(even) {
+  background: #0e1016;
+}
+
+.table tbody tr:nth-child(odd) {
+  background: #11131a;
+}
+
+/* Keeping "Due" column on one line */
+.table thead th:nth-child(3),
+.table tbody td:nth-child(3) {
+  white-space: nowrap;
+}
+
+/* Actions buttons remain as-is */
+.actions-inline {
+  display: inline-flex;
+  gap: 8px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.badge.high {
+  background: #2a1b33;
+  color: #e6d8ff;
+  border-color: #3a2a4b;
+}
+
+.badge.medium {
+  background: #1b2a33;
+  color: #d6f3ff;
+  border-color: #2a3b4b;
+}
+
+.badge.low {
+  background: #1b3322;
+  color: #d6ffe9;
+  border-color: #284b36;
+}
+
+.badge.overdue {
+  background: #361a1a;
+  color: #ffd6d6;
+  border-color: #4b2a2a;
+}
+
+.badge.soon {
+  background: #332611;
+  color: #ffe9c7;
+  border-color: #4b3a1f;
+}
+
+.actions-inline {
+  display: inline-flex;
+  gap: 8px;
+}
+
+.row-btn {
+  height: 28px;
+  padding: 0 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #131722;
+  color: var(--text);
+  cursor: pointer;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.row-btn:hover {
+  border-color: #2d3342;
+}
+
+.row-title {
+  display: flex;
+  flex-direction: column;
+}
+
+.row-title small {
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.status-pill {
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  border: 1px solid var(--border);
+  background: #11131a;
+}
+
+.status-pill.done {
+  background: #0f1a12;
+  color: #bff3cf;
+  border-color: #1b2b21;
+}
+
+.status-pill.doing {
+  background: #12161f;
+  color: #cbd7ff;
+  border-color: #1a2340;
+}
+
+.status-pill.todo {
+  background: #1c141e;
+  color: #fbd4ff;
+  border-color: #33213a;
+}
+
+#toast {
+  position: fixed;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #15171c;
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 14px;
+  box-shadow: var(--shadow);
+  display: none;
+  z-index: 9999;
+}
+
+#toast.show {
+  display: inline-block;
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.55);
+}
+
+#editDialog {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 0;
+  background: var(--panel);
+  color: var(--text);
+}
+
+.edit-form {
+  padding: 16px;
+  min-width: 360px;
+  display: grid;
+  gap: 8px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.edit-form label {
+  display: grid;
+  gap: 6px;
+}
+
+.edit-form .span-2 {
+  grid-column: span 2;
+}
+
+.edit-form input,
+.edit-form select,
+.edit-form textarea {
+  height: 36px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #0f1118;
+  color: var(--text);
+  padding: 0 10px;
+}
+
+.edit-form textarea {
+  height: auto;
+  padding: 10px;
+}
+
+.edit-form menu {
+  grid-column: span 2;
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.app-footer small {
+  color: var(--muted);
+  display: flex;
+  justify-content: space-between;
+}
+.app-footer small a {
+  text-decoration: none;
+}
+.app-footer small a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 980px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  .edit-form {
+    grid-template-columns: 1fr;
+  }
+  .table-head,
+  .table-row {
+    grid-template-columns: 2.2fr 1fr 1.3fr 0.9fr 0.9fr 1fr 1.2fr 0.9fr;
+  }
+}
+@media print {
+  /* 1) Tell the browser to keep colors if possible */
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    /* supported in modern Chromium/Firefox */
+    background: #fff !important;
+    color: #000 !important;
+  }
+  /* 2) Hide app chrome; print only the list */
+  .app-header,
+  .left-panel,
+  .filters,
+  #toast,
+  .app-footer {
+    display: none !important;
+  }
+  /* 3) Light theme tokens for print */
+  :root {
+    --bg: #fff;
+    --card: #fff;
+    --panel: #fff;
+    --text: #000;
+    --muted: #333;
+    --border: #bbb;
+  }
+  /* 4) Table & cards — no shadows, clear borders */
+  .card,
+  .table-card {
+    background: #fff !important;
+    border: 1px solid #bbb !important;
+    box-shadow: none !important;
+  }
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .table thead th {
+    background: #f2f2f2 !important;
+    color: #000 !important;
+    border-bottom: 1px solid #bbb !important;
+  }
+  .table tbody td {
+    border-bottom: 1px solid #e3e3e3 !important;
+    color: #000 !important;
+  }
+  /* Light zebra (works even if backgrounds get dropped) */
+  .table tbody tr:nth-child(even) {
+    background: #fafafa !important;
+  }
+  .table tbody tr:nth-child(odd) {
+    background: #fff !important;
+  }
+  /* 5) Badges & status pills — outline styles for legibility */
+  .badge,
+  .status-pill {
+    background: transparent !important;
+    color: #000 !important;
+    border: 1px solid #777 !important;
+  }
+  /* Give semantic hints via border/text color (no fills needed) */
+  .badge.high {
+    border-color: #b00020 !important;
+    color: #b00020 !important;
+  }
+  .badge.medium {
+    border-color: #0b57d0 !important;
+    color: #0b57d0 !important;
+  }
+  .badge.low {
+    border-color: #0b8a42 !important;
+    color: #0b8a42 !important;
+  }
+  .badge.overdue {
+    border-color: #b00020 !important;
+    color: #b00020 !important;
+    font-weight: 600;
+  }
+  .badge.soon {
+    border-color: #b8860b !important;
+    color: #b8860b !important;
+  }
+  .status-pill.done {
+    border-color: #0b8a42 !important;
+    color: #0b8a42 !important;
+  }
+  .status-pill.doing {
+    border-color: #555 !important;
+    color: #555 !important;
+  }
+  .status-pill.todo {
+    border-color: #555 !important;
+    color: #555 !important;
+  }
+  /* 6) Keep “Due” column on one line */
+  .table thead th:nth-child(3),
+  .table tbody td:nth-child(3) {
+    white-space: nowrap;
+  }
+}/*# sourceMappingURL=style.css.map */
